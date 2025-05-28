@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tara Katz</h1>
+    <h2>Course: COP4813</h2>
+    <h3>Major: Computer Science</h3>
+    <p>Hello, Welcome to my dynamic functioning page!</p>
+
+    <script>
+        const hour = new Date().getHours();
+        let bgColor;
+
+        if (hour >= 6 && hour < 12) {
+            bgColor = "#fbbeff"; // Morning (Light Pink)
+        } else if (hour >= 12 && hour < 18) {
+            bgColor = "#81c8ff"; // Afternoon (Light Blue)
+        } else if (hour >= 18 && hour < 21) {
+            bgColor = "#b02eff"; // Evening (Purple)
+        } else {
+            bgColor = "#0d0c76"; // Night (Dark Blue)
+        }
+
+        document.body.style.backgroundColor = bgColor;
+    </script>
+
+</body>
+</html>
