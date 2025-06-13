@@ -9,7 +9,7 @@
       font-family: Arial, sans-serif;
       text-align: center;
       padding: 2rem;
-      background-color: #f5f5f5;
+      background-color: #82acc6;
     }
     img {
       max-width: 80%;
@@ -35,17 +35,17 @@
     const hour = now.getHours();
 
     if (hour >= 6 && hour < 12) {
-      // Morning
-      imgElement.src = "https://unsplash.com/illustrations/person-sits-on-the-beach-near-the-colorful-huts-ApnHfoL8kyY"; // Sunrise example
-      imgElement.alt = "Morning - Sunrise";
+      // Morning image 
+      imgElement.src = "TImages/morning.jpeg"; 
+      imgElement.alt = "Morning";
     } else if (hour >= 12 && hour < 18) {
-      // Afternoon
-      imgElement.src = "https://images.unsplash.com/photo-1494173853739-c21f58b16055"; // Sunny afternoon
-      imgElement.alt = "Afternoon - Sunshine";
+      // Afternoon image
+      imgElement.src = "TImages/afternoon.jpeg"; 
+      imgElement.alt = "Afternoon";
     } else {
-      // Evening or Night
-      imgElement.src = "https://images.unsplash.com/photo-1504198453319-5ce911bafcde"; // Night city lights
-      imgElement.alt = "Night - City Lights";
+      // Night image
+      imgElement.src = "TImages/night.jpg"; 
+      imgElement.alt = "Night";
     }
     </script>
 
