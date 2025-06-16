@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Subject Menu</title>
+  <style>
+    body { font-family: Arial; text-align: center; }
+    .subjects, .topics { margin: 10px; }
+    .topics { display: none; }
+    .back-button { margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h1>Select a Subject:</h1>
+  <div class="subjects">
+    <button onclick="showTopics('Foreign Language')">Foreign Language</button>
+    <button onclick="showTopics('Music')">Music</button>
+    <button onclick="showTopics('Business')">Business</button>
+  </div>
+
+  <div class="topics" id="Foreign Language">
+    <h2>Foreign Language Topics</h2>
+    <a href="Spanish.html">Spanish</a><br />
+    <a href="Korean.html">Korean</a><br />
+    <a href="Chinese.html">Chinese</a><br />
+    <a href="Japanese.html">Japanese</a><br />
+    <button class="back-button" onclick="goBack()">Back</button>
+  </div>
+
+  <div class="topics" id="Music">
+    <h2>Science Topics</h2>
+    <a href="Piano.html">Piano</a><br />
+    <a href="Guitar.html">Guitar</a><br />
+    <a href="Drums.html">Drums</a><br />
+    <a href="Violin.html">Violin</a><br />
+    <button class="back-button" onclick="goBack()">Back</button>
+  </div>
+
+  <div class="topics" id="Business">
+    <h2>History Topics</h2>
+    <a href="Accounting.html">Accounting</a><br />
+    <a href="Marketing.html">Marketing</a><br />
+    <a href="BusinessAdmin.html">Business Administration</a><br />
+    <a href="Finance.html">Finance</a><br />
+    <button class="back-button" onclick="goBack()">Back</button>
+  </div>
+
+  <script>
+    function showTopics(subject) {
+      document.querySelector('.subjects').style.display = 'none';
+      document.querySelectorAll('.topics').forEach(div => div.style.display = 'none');
+      document.getElementById(subject).style.display = 'block';
+    }
+
+    function goBack() {
+      document.querySelectorAll('.topics').forEach(div => div.style.display = 'none');
+      document.querySelector('.subjects').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
